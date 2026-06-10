@@ -1,0 +1,42 @@
+:root {
+    --bg_colour: black; 
+    --txt_colour: white; 
+}
+
+.sticky {
+    background-color: aqua;
+    position: sticky;
+    top: 0;
+    height: 20vh;
+    display: flex;
+}
+
+.navbar {
+    background-color: red;
+    height: 20vh;
+    width: 100%;
+}
+
+
+.dynamic-section {
+    background-color: var(--bg_colour);
+    color: var(--txt_colour);
+
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.sidebar {
+    background-color: purple;
+    width: 16vw;
+    height: 100vh;
+}
+
+#left_sidebar {
+    left: 0;
+}
+
+#right_sidebar {
+    margin-left: auto;
+}

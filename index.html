@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temp Title</title>
+    <link rel="stylesheet" href="style.css">
     <script src="./index.js"></script>
 </head>
 
 <body>
-    <!-- <div class="sticky">
+    <div class="sticky">
 
 
         <div class="sidebar" id="left_sidebar"></div>
@@ -20,56 +21,56 @@
         </div>
 
         <div class="sidebar" id="right_sidebar"></div>
-    </div> -->
+    </div>
     <!-- Sections -->
     <div id="sections">
 
-        <div class="section">
-            <h1>Title</h1>
-            <img>
+        <div class="dynamic-section" 
+            style='
+                --bg_colour: black; 
+                --txt_colour: white; 
+            '>
+            <h1>Section Title</h1> 
+            <img src="
+            https://cdn.britannica.com/88/256588-050-069B5B0F/Dante-Alighieri-portrait-Divine-Comedy-Inferno.jpg?w=400&h=300&c=crop">
             <div class="textbox">
                 <p>weeee</p>
             </div>
-        </div>  
+        </div>
+
+        
+        <div class="dynamic-section" 
+            style='
+                --bg_colour: red; 
+                --txt_colour: green; 
+            '>
+            <h1>Section Title</h1> 
+            <img src="
+            https://cdn.britannica.com/88/256588-050-069B5B0F/Dante-Alighieri-portrait-Divine-Comedy-Inferno.jpg?w=400&h=300&c=crop">
+            <div class="textbox">
+                <p>weeee</p>
+            </div>
+        </div>
+
+        
+        <div class="dynamic-section" 
+            style='
+                --bg_colour: orange; 
+                --txt_colour: purple; 
+            '>
+            <h1>Section Title</h1> 
+            <img src="
+            https://cdn.britannica.com/88/256588-050-069B5B0F/Dante-Alighieri-portrait-Divine-Comedy-Inferno.jpg?w=400&h=300&c=crop">
+            <div class="textbox">
+                <p>weeee</p>
+            </div>
+        </div>
+
+
+
+
+
     </div>
-
-    <style>
-        .sticky {
-            background-color: aqua;
-            position: sticky;
-            top: 0;
-            height: 20vh;
-            display: flex;
-        }
-
-        .navbar {
-            background-color: red;
-            height: 20vh;
-            width: 100%;
-        }
-
-
-        .section {
-            background-color: green;
-            align-items: center;
-            justify-content: center;
-            display: flex;
-        }
-
-        .sidebar {
-            background-color: purple;
-            width: 16vw;
-            height: 100vh;
-        }
-
-        #left_sidebar {
-            left: 0;
-        }
-
-        #right_sidebar {
-            margin-left: auto;
-        }
-    </style>
 </body>
 
 </html>
