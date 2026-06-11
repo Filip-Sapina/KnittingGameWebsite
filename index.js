@@ -1,9 +1,10 @@
+const SIDE_COUT = 50;
 
-function getShapePoints(sides, randomazzo) {
+function getShapePoints(sides, random_factor    ) {
   const points = [];
 
-  const width = 80;
-  const height = 50;
+  const width = 100;
+  const height = 100;
 
   for (let i = 0; i < sides; i++) {
       const t = i / sides;
@@ -32,8 +33,8 @@ function getShapePoints(sides, randomazzo) {
       }
 
       // Random wobble
-      x += (Math.random() - 0.5) * randomazzo;
-      y += (Math.random() - 0.5) * randomazzo;
+      x += (Math.random() - 0.5) * random_factor;
+      y += (Math.random() - 0.5) * random_factor;
 
       points.push({
           x: x.toFixed(2),
@@ -55,23 +56,16 @@ function PointsToClippath(points) {
 
     return result;
 }
-// document.addEventListener("DOMContentLoaded", () => {
-//   for (let i = 0; i < 101; i += 2) {
-//     let element = document.createElement("div");
-//     element.style.backgroundImage = "linear-gradient(white, black)";
-//     element.style.display = "flex";
-//     element.style.justifyContent = "center";
-//     element.style.textAlign = "center"
-//     element.style.padding = "100px";
-//     element.style.alignItems = "center";
-//     element.style.color = "white";
-//     element.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna Lorem ipsum dolor sit amet, consectetu" 
-//     ;
-//     element.style.height = "500px";
-//     element.style.width = "500px";
+document.addEventListener("DOMContentLoaded", () => {
+    let elements = document.getElementsByClassName("torn-paper");
+    
+    Array.from(elements).forEach(element => {
+        const style = window.getComputedStyle(element);
+        const rnd_factor = style.getPropertyValue('--random_factor');
+        if (rnd_factor != 0) {element.style.clipPath = `polygon(${PointsToClippath(getShapePoints(100, rnd_factor))})`;   };
+        
+    })
+    
 
-//     element.style.clipPath = `polygon(${PointsToClippath(getShapePoints(100, i))})`;
-
-//     document.getElementById("sections").appendChild(element);
-//   }
-// })
+    
+})

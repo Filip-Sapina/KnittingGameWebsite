@@ -1,6 +1,14 @@
 :root {
     --bg_colour: black; 
+    --title_colour: white;
     --txt_colour: white; 
+    --random_factor: 0; 
+}
+
+@media only screen and (max-width: 768px) {
+    .hide-on-mobile {
+        display: none !important; 
+    }
 }
 
 .sticky {
@@ -9,6 +17,7 @@
     top: 0;
     height: 20vh;
     display: flex;
+    z-index: 10;
 }
 
 .navbar {
@@ -18,20 +27,56 @@
 }
 
 
+.sidebar {
+    background-color: purple;
+    width: 32rem;
+    height: 100vh;
+}
+
+.section-bumper {
+    flex-shrink: 0;
+    height: 30em;
+    width: 32rem;
+}
+
 .dynamic-section {
     background-color: var(--bg_colour);
     color: var(--txt_colour);
+    height: 30em;
 
-    text-align: center;
-    justify-content: center;
+    display:grid;
+    grid-template-columns: 32rem 50% 50% 32rem;
+    grid-row: 50% 50%;
+    row-gap: 1em;
+}
+
+.dynamic-section h1 {
+    margin: 0 0 15% 0;
+}
+
+.dynamic-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.section-divider {
     display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.sidebar {
-    background-color: purple;
-    width: 16vw;
-    height: 100vh;
+.torn-paper {
+    width: 50%;
+    height: 50%;
+    background-image: radial-gradient(#aaaa00, #dddd00);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    z-index: 2;
 }
+
 
 #left_sidebar {
     left: 0;
