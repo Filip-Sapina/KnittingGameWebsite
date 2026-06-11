@@ -9,6 +9,12 @@
     .hide-on-mobile {
         display: none !important; 
     }
+    .dynamic-section {
+        margin-left: 0;
+        margin-right: 0;
+
+        grid-template-columns: 1fr;
+    }
 }
 
 .sticky {
@@ -42,22 +48,44 @@
 .dynamic-section {
     background-color: var(--bg_colour);
     color: var(--txt_colour);
-    height: 30em;
 
-    display:grid;
-    grid-template-columns: 32rem 50% 50% 32rem;
-    grid-row: 50% 50%;
-    row-gap: 1em;
+    min-height: 30em;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    "title paper1"
+    "paper2 image";
+
+    gap: 2rem;
+
+    /* keeps content away from sidebars */
+    max-width: calc(100vw - 64rem);
+    margin: 0 auto;
 }
 
-.dynamic-section h1 {
-    margin: 0 0 15% 0;
+.section-title {
+    grid-area: title;
 }
 
-.dynamic-section img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+.paper-1 {
+    grid-area: paper1;
+}
+
+.paper-2 {
+    grid-area: paper2;
+}
+
+.section-image {
+    grid-area: image;
+}
+
+.section-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .section-divider {
@@ -67,15 +95,21 @@
 }
 
 .torn-paper {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
+
+    min-height: 12rem;
+
     background-image: radial-gradient(#aaaa00, #dddd00);
+
+    box-sizing: border-box;
+    padding: 1rem;
+
     display: flex;
     justify-content: center;
-    text-align: center;
     align-items: center;
-    z-index: 2;
 }
+
 
 
 #left_sidebar {
