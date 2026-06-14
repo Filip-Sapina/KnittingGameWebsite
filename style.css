@@ -1,10 +1,12 @@
 :root {
     --bg_colour: black;
+    --paper_colour: radial-gradient(#aaaa00, #dddd00);
     --title_colour: white;
     --txt_colour: white;
     --random_factor: 0;
 }
 
+/* global */
 
 * {
     box-sizing: border-box;
@@ -14,6 +16,8 @@ body {
     margin: 0;
     overflow-x: hidden;
 }
+
+/* navigation / sidebars */
 
 .sticky {
     background-color: aqua;
@@ -51,6 +55,8 @@ body {
     margin-left: auto;
 }
 
+/* sections */
+
 .dynamic-section {
     background-color: var(--bg_colour);
     color: var(--txt_colour);
@@ -76,6 +82,10 @@ body {
 }
 
 .section-title {
+    color: var(--title_colour);
+    
+    font-size: 4rem;
+
     grid-area: title;
     margin: 0;
 }
@@ -110,7 +120,7 @@ body {
     width: 100%;
     min-height: 12rem;
 
-    background-image: radial-gradient(#aaaa00, #dddd00);
+    background-image: var(--paper_colour);
 
     padding: 1rem;
 
@@ -120,6 +130,8 @@ body {
 
     overflow-wrap: break-word;
 }
+
+/* mobile */
 
 @media (max-width: 768px) {
 
