@@ -55,23 +55,23 @@ function PointsToClippath(points) {
 
     return result;
 }
-document.addEventListener("DOMContentLoaded", () => {
-  for (let i = 0; i < 101; i += 2) {
-    let element = document.createElement("div");
-    element.style.backgroundImage = "linear-gradient(white, black)";
-    element.style.display = "flex";
-    element.style.justifyContent = "center";
-    element.style.textAlign = "center"
-    element.style.padding = "100px";
-    element.style.alignItems = "center";
-    element.style.color = "white";
-    element.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna Lorem ipsum dolor sit amet, consectetu" 
-    ;
-    element.style.height = "500px";
-    element.style.width = "500px";
+// document.addEventListener("DOMContentLoaded", () => {
+//   for (let i = 0; i < 101; i += 2) {
+//     let element = document.createElement("div");
+//     element.style.backgroundImage = "linear-gradient(white, black)";
+//     element.style.display = "flex";
+//     element.style.justifyContent = "center";
+//     element.style.textAlign = "center"
+//     element.style.padding = "100px";
+//     element.style.alignItems = "center";
+//     element.style.color = "white";
+//     element.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna Lorem ipsum dolor sit amet, consectetu" 
+//     ;
+//     element.style.height = "500px";
+//     element.style.width = "500px";
 
-    element.style.clipPath = `polygon(${PointsToClippath(getShapePoints(100, i))})`;
+//     element.style.clipPath = `polygon(${PointsToClippath(getShapePoints(100, i))})`;
 
-    document.getElementById("sections").appendChild(element);
-  }
-})
+//     document.getElementById("sections").appendChild(element);
+//   }
+// })
