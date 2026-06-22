@@ -1,6 +1,6 @@
 :root {
     --bg_colour: black;
-    --paper_colour: radial-gradient(#aaaa00, #dddd00);
+    --paper_colour: url("torn-paper.png");
     --title_colour: white;
     --txt_colour: white;
     --random_factor: 0;
@@ -40,6 +40,8 @@ body {
 
 .sidebar {
     background-color: purple;
+    background-image: url(wool.png);
+    background-size: 500px 500px;
 
     width: 20rem;
     min-height: 100vh;
@@ -59,8 +61,10 @@ body {
 
 .dynamic-section {
     background-color: var(--bg_colour);
-    color: var(--txt_colour);
 
+    filter: sepia(100%) hue-rotate(150deg);
+    color: var(--txt_colour);
+    background-image: url(wood.png);
     min-height: 30em;
     padding: 2rem;
 
@@ -121,6 +125,7 @@ body {
     min-height: 12rem;
 
     background-image: var(--paper_colour);
+    background-size: 50% 50%;
 
     padding: 1rem;
 

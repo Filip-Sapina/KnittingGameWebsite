@@ -56,13 +56,35 @@ function PointsToClippath(points) {
 
     return result;
 }
+
+class RGB {
+    constructor(r, g, b) {
+        this.r = r;
+        this.g = g;
+        this.b = b;
+    }
+}
+
+function hexToRGB(hex) {
+    console.log(hex)
+    let h = hex.replace(/^#/, ""); 
+    h = parseInt(h, 16);
+    return new RGB(h>>>16, (h&0x00ff00)>>>8, h&0x0000ff);
+};
+
+
 document.addEventListener("DOMContentLoaded", () => {
     let elements = document.getElementsByClassName("torn-paper");
     
     Array.from(elements).forEach(element => {
         const style = window.getComputedStyle(element);
+
         const rnd_factor = style.getPropertyValue('--random_factor');
         if (rnd_factor != 0) {element.style.clipPath = `polygon(${PointsToClippath(getShapePoints(100, rnd_factor))})`;   };
+
+        const bg_colour = style.getPropertyValue('--bg_colour');
+        console.log(hexToRGB(bg_colour))
+
         
     })
     
