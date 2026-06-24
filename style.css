@@ -60,9 +60,9 @@ body {
 /* sections */
 
 .dynamic-section {
-    background-color: var(--bg_colour);
-
-    filter: sepia(100%) hue-rotate(150deg);
+      background-color: var(--bg_colour);
+    background-blend-mode: multiply;
+        
     color: var(--txt_colour);
     background-image: url(wood.png);
     min-height: 30em;
