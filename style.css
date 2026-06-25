@@ -1,6 +1,6 @@
 :root {
     --bg_colour: black;
-    --paper_colour: radial-gradient(#aaaa00, #dddd00);
+    --paper_colour: url("torn-paper.png");
     --title_colour: white;
     --txt_colour: white;
     --random_factor: 0;
@@ -32,7 +32,9 @@ body {
 }
 
 .navbar {
-    background-color: red;
+    background-color: #ffaa88;
+    background-blend-mode: multiply;
+    background-image: url("wood.png");
 
     width: 100%;
     min-height: 5rem;
@@ -40,6 +42,8 @@ body {
 
 .sidebar {
     background-color: purple;
+    background-image: url(wool.png);
+    background-size: 500px 500px;
 
     width: 20rem;
     min-height: 100vh;
@@ -58,9 +62,11 @@ body {
 /* sections */
 
 .dynamic-section {
-    background-color: var(--bg_colour);
+      background-color: var(--bg_colour);
+    background-blend-mode: multiply;
+        
     color: var(--txt_colour);
-
+    background-image: url(wood.png);
     min-height: 30em;
     padding: 2rem;
 
@@ -121,6 +127,9 @@ body {
     min-height: 12rem;
 
     background-image: var(--paper_colour);
+    background-color: blanchedalmond;
+    background-blend-mode: multiply;
+    background-size: 50% 50%;
 
     padding: 1rem;
 

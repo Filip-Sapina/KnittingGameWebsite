@@ -56,15 +56,19 @@ function PointsToClippath(points) {
 
     return result;
 }
+
+
 document.addEventListener("DOMContentLoaded", () => {
     let elements = document.getElementsByClassName("torn-paper");
     
     Array.from(elements).forEach(element => {
         const style = window.getComputedStyle(element);
+
         const rnd_factor = style.getPropertyValue('--random_factor');
         if (rnd_factor != 0) {element.style.clipPath = `polygon(${PointsToClippath(getShapePoints(100, rnd_factor))})`;   };
-        
+
     })
+
     
 
     
