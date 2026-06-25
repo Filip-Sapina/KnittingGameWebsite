@@ -1,6 +1,6 @@
 :root {
     --bg_colour: black;
-    --paper_colour: radial-gradient(#aaaa00, #dddd00);
+    --paper_colour: radial-gradient(#333333, #555555);
     --title_colour: white;
     --txt_colour: white;
     --random_factor: 0;
@@ -32,14 +32,14 @@ body {
 }
 
 .navbar {
-    background-color: red;
+    background-color: #888888;
 
     width: 100%;
     min-height: 5rem;
 }
 
 .sidebar {
-    background-color: purple;
+    background-color: #666666;
 
     width: 20rem;
     min-height: 100vh;
@@ -85,6 +85,9 @@ body {
     color: var(--title_colour);
     
     font-size: 4rem;
+    background-color: #333333;
+    padding: 1rem;
+    border-radius: 10px;
 
     grid-area: title;
     margin: 0;
@@ -100,6 +103,7 @@ body {
 
 .section-image {
     grid-area: image;
+    border-radius: 10px;
 
     width: 100%;
     height: 100%;
