@@ -6,6 +6,44 @@
     --random_factor: 0;
 }
 
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #111; /* Choose your base background */
+}
+
+.dust-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; 
+    z-index: 9999; 
+    background: transparent;
+    background-image: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.5) 1px, transparent 5px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.3) 2px, transparent 5px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.1) 3px, transparent 5px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 90px;
+    animation: floatDust 20s linear infinite;
+}
+
+
+
+@keyframes floatDust {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        transform: translateY(-550px) translateX(300px);
+    }
+}
+
+
+
 /* global */
 
 * {
