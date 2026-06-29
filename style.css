@@ -57,6 +57,17 @@ body {
 
 /* navigation / sidebars */
 
+.bottom-vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; 
+  z-index: 9999; 
+  background: radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.7) 60%);
+}
+
 .sticky {
     background-color: aqua;
     position: sticky;
