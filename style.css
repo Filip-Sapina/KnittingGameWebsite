@@ -191,6 +191,22 @@ body {
     overflow-wrap: break-word;
 }
 
+.footer {
+    min-height: 25vh;
+
+    background-color: #ffaa88;
+    background-blend-mode: multiply;
+    background-image: url("wood.png");
+}
+
+/* desktop */
+
+@media (min-width: 768px) {
+    .hide-on-desktop {
+        display: none !important;
+    }
+}
+
 /* mobile */
 
 @media (max-width: 768px) {
